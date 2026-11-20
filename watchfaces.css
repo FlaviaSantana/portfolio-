@@ -1,0 +1,602 @@
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: #090808;
+
+    color: #f4eee7;
+
+    font-family: "Jost", sans-serif;
+
+    line-height: 1.7;
+
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+
+/* =====================================
+   COLORS
+===================================== */
+
+:root {
+
+    --black: #090808;
+
+    --black-soft: #121010;
+
+    --wine: #6f1825;
+
+    --ruby: #9d2436;
+
+    --gold: #c9a45c;
+
+    --gold-light: #e0c987;
+
+    --cream: #f4eee7;
+
+    --gray: #aaa3a0;
+
+}
+
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+nav {
+
+    height: 80px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid
+        rgba(201, 164, 92, 0.15);
+
+}
+
+
+.logo {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--gold);
+
+}
+
+
+
+/* =====================================
+   PAGE HEADER
+===================================== */
+
+.watchfaces-header {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 110px 25px 80px;
+
+}
+
+
+.back-link {
+
+    display: inline-block;
+
+    margin-bottom: 60px;
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+
+}
+
+
+.back-link:hover {
+
+    color: var(--gold);
+
+}
+
+
+.eyebrow {
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.watchfaces-header h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(65px, 10vw, 120px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+}
+
+
+.watchfaces-header h1 span {
+
+    color: var(--ruby);
+
+}
+
+
+.intro {
+
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+    color: var(--gray);
+
+    font-size: 15px;
+
+}
+
+
+
+/* =====================================
+   GRID
+===================================== */
+
+.watchfaces-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 20px 30px 140px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 35px;
+
+}
+
+
+
+/* =====================================
+   WATCHFACE CARD
+===================================== */
+
+.watchface-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151212,
+            #0e0c0c
+        );
+
+    border: 1px solid
+        rgba(201, 164, 92, 0.18);
+
+    padding: 30px;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+
+}
+
+
+.watchface-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(201, 164, 92, 0.55);
+
+}
+
+
+
+/* =====================================
+   WATCHFACE IMAGE
+===================================== */
+
+.watchface-image {
+
+    background: #050505;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 35px;
+
+    min-height: 350px;
+
+}
+
+
+.watchface-image img {
+
+    width: 260px;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid
+        rgba(201, 164, 92, 0.5);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.7);
+
+}
+
+
+
+/* =====================================
+   INFORMATION
+===================================== */
+
+.watchface-info {
+
+    padding-top: 28px;
+
+}
+
+
+.watchface-type {
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.watchface-info h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin: 12px 0 15px;
+
+}
+
+
+.watchface-info p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    min-height: 65px;
+
+}
+
+
+
+/* =====================================
+   DETAILS
+===================================== */
+
+.watchface-details {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin: 20px 0;
+
+}
+
+
+.watchface-details span {
+
+    border: 1px solid
+        rgba(201, 164, 92, 0.3);
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    padding: 5px 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* =====================================
+   GOOGLE PLAY LINK
+===================================== */
+
+.play-link {
+
+    display: inline-block;
+
+    margin-top: 5px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+
+}
+
+
+.play-link:hover {
+
+    color: var(--gold-light);
+
+    transform:
+        translateX(5px);
+
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    border-top: 1px solid
+        rgba(201, 164, 92, 0.15);
+
+    background: #060505;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+}
+
+
+.footer-logo {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+
+}
+
+
+.footer-logo span {
+
+    color: var(--cream);
+
+}
+
+
+footer p {
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    margin-top: 10px;
+
+}
+
+
+.footer-links,
+.footer-legal {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+    font-size: 10px;
+
+}
+
+
+.footer-links a:hover,
+.footer-legal a:hover {
+
+    color: var(--gold);
+
+}
+
+
+.copyright {
+
+    margin-top: 30px !important;
+
+    font-size: 9px !important;
+
+}
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 800px) {
+
+
+    nav {
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .watchfaces-header {
+
+        padding-top: 80px;
+
+    }
+
+
+    .watchfaces-grid {
+
+        grid-template-columns: 1fr;
+
+        padding:
+            10px 20px 100px;
+
+    }
+
+
+    .watchface-image {
+
+        min-height: 300px;
+
+    }
+
+
+    .watchface-image img {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+
+    .watchface-info h2 {
+
+        font-size: 38px;
+
+    }
+
+}
